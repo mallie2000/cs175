@@ -10,8 +10,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
 });
+
 app.get('/about', (req, res) => {
-  res.render('about', { title: 'Page 2' });
+  res.render('about', { title: 'About page' });
+});
+
+app.get('/membership', (req, res) => {
+  res.render('membership', { title: 'Page 2' });
 });
 
 
