@@ -28,13 +28,16 @@ app.get('/reducing_costs', (req, res) => {
   res.render('reducing_costs', { title: 'Reducing Costs Page' });
 });
 app.get('/saving_money', (req, res) => {
-  res.render('saving_money', { title: 'Reducing Costs Page' });
+  res.render('saving_money', { title: 'saving money page' });
 });
 app.get('/stocks', (req, res) => {
-  res.render('stocks', { title: 'Reducing Costs Page' });
+  res.render('stocks', { title: 'stocks Page' });
 });
 app.get('/first_time_home', (req, res) => {
-  res.render('first_time_home', { title: 'Reducing Costs Page' });
+  res.render('first_time_home', { title: 'First time home Page' });
+});
+app.get('/saving_for_retirement', (req, res) => {
+  res.render('saving_for_retirement', { title: 'Saving for retirement Page' });
 });
 
 
