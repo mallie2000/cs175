@@ -16,7 +16,22 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/membership', (req, res) => {
-  res.render('membership', { title: 'Page 2' });
+  res.render('membership', { title: 'Membership Page' });
+});
+app.get('/courses', (req, res) => {
+  res.render('courses', { title: 'Courses Page' });
+});
+app.get('/credit', (req, res) => {
+  res.render('credit', { title: 'Credit Page' });
+});
+app.get('/reducing_costs', (req, res) => {
+  res.render('reducing_costs', { title: 'Reducing Costs Page' });
+});
+app.get('/saving_money', (req, res) => {
+  res.render('saving_money', { title: 'Reducing Costs Page' });
+});
+app.get('/stocks', (req, res) => {
+  res.render('stocks', { title: 'Reducing Costs Page' });
 });
 
 
