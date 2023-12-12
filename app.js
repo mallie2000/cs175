@@ -33,6 +33,9 @@ app.get('/saving_money', (req, res) => {
 app.get('/stocks', (req, res) => {
   res.render('stocks', { title: 'Reducing Costs Page' });
 });
+app.get('/first_time_home', (req, res) => {
+  res.render('first_time_home', { title: 'Reducing Costs Page' });
+});
 
 
 const port = 3000;
