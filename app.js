@@ -15,6 +15,15 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'About page' });
 });
 
+app.get('/quiz', (req, res) => {
+  res.render('quiz', { title: 'Quiz Page' });
+});
+
+app.get('/calc', (req, res) => {
+  res.render('calc', { title: 'Mortgage Calculator' });
+});
+
+
 app.get('/membership', (req, res) => {
   res.render('membership', { title: 'Membership Page' });
 });
