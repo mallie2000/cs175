@@ -48,6 +48,25 @@ app.get('/roth_vs_traditional_ira', (req, res) => {
 app.get('/down_payment', (req, res) => {
   res.render('down_payment', { title: 'Fundementals of Down Payments' });
 });
+app.get('/free_tax_filing', (req, res) => {
+  res.render('free_tax_filing', { title: 'Free Tax Filing and Prep' });
+});
+app.get('/home_affordability', (req, res) => {
+  res.render('home_affordability', { title: 'Home Affordability' });
+});
+
+app.get('/tax_bracket', (req, res) => {
+  res.render('tax_bracket', { title: 'Different Tax Brackets' });
+});
+app.get('/federal_vs_state', (req, res) => {
+  res.render('federal_vs_state', { title: 'Federal Taxes vs States Taxes:' });
+});
+app.get('/understanding_tax_witholding', (req, res) => {
+  res.render('understanding_tax_witholding', { title: 'Understanding Tax Witholding' });
+});
+app.get('/mortgage_option', (req, res) => {
+  res.render('mortgage_option', { title: 'Morgage Option' });
+});
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
