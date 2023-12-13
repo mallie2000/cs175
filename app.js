@@ -39,8 +39,15 @@ app.get('/first_time_home', (req, res) => {
 app.get('/saving_for_retirement', (req, res) => {
   res.render('saving_for_retirement', { title: 'Saving for retirement Page' });
 });
-
-
+app.get('/401k_retirement_plans', (req, res) => {
+  res.render('401k_retirement_plans', { title: '401K Retirement Plans' });
+});
+app.get('/roth_vs_traditional_ira', (req, res) => {
+  res.render('roth_vs_traditional_ira', { title: 'Roth vs Traditional IRA' });
+});
+app.get('/down_payment', (req, res) => {
+  res.render('down_payment', { title: 'Fundementals of Down Payments' });
+});
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
