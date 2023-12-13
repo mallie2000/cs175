@@ -4,7 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>House Affordability Calculator</title>
-  <!-- Add your CSS styles here -->
+  <link rel="stylesheet" href="/css/style.css"> <!-- Add your CSS styles here -->
+</head>
+<body id="ih8aja">
+  <div id="ilnhsc" class="gjs-grid-row">
+    <div id="ikefqd" class="gjs-grid-column">
+      <div id="irz6kd" class="gjs-grid-row">
+        <div id="itk6db" class="gjs-grid-column"><a href = "\"><img src="assets/screenshot_2023_12_09_154651.png" id="iyopjd" /></a></div>
+        <div id="i8e2t6" class="gjs-grid-row">
+          <div id="i4i801" class="gjs-grid-row">
+            <div class="gjs-grid-column"><a class="gjs-link-box"><a id="ioeqjy" class="gjs-link" href = "about"><b
+                    id="idopg4">About</b></a></a></div>
+            <div class="gjs-grid-column"><a class="gjs-link-box"><a id="ike6i5" class="gjs-link" href = "courses"><b
+                    id="ii8y8q">Courses</b></a></a></div>
+            <div class="gjs-grid-column"><a class="gjs-link-box"><a id="im5huh" class="gjs-link" href = "membership"><b
+                    id="ip8cpj">Membership</b></a></a></div>
+            <div class="gjs-grid-column"><a class="gjs-link-box"><a id="ibfz2h" class="gjs-link" href = "quiz"><b
+                      id="ijhl8p">Quiz</b></a></a></div>
+            <div class="gjs-grid-column"><a class="gjs-link-box"><a id="ibfz2h" class="gjs-link" href = "calc"><b
+                        id="ijhl8p">Calculator</b></a></a></div>
+          </div>
+        </div>
+        <div id="i9o1ez" class="gjs-grid-column">
+          <div id="ilzb2o" class="gjs-grid-row">
+            <div id="iudvmf" class="gjs-grid-column"><a id="itmxei" class="gjs-button">Donate</a></div>
+            <div id="ikaeyu" class="gjs-grid-column"><a id="iu9bt5" class="gjs-button">Register</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="icc0zh" class="gjs-grid-row">
+    <div id="ie72tm" class="gjs-grid-column">
+      <div id="iaxu29" class="gjs-grid-row">
+        <div id="ihvycs" class="gjs-grid-column">
+          <h1>House Affordability Calculator</h1>
+        </div>
+      </div>
+      <div id="iaxu29" class="gjs-grid-row">
+        <div id="ihvycs" class="gjs-grid-column">
+          <form id="calculatorForm">
+            <label for="income">Annual Income ($):</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="loanTerm">Loan Term (years):</label>
+            <input type="number" id="loanTerm" name="loanTerm" required>
+
+            <!-- New input field for total debt -->
+            <label for="totalDebt">Total Debt ($):</label>
+            <input type="number" id="totalDebt" name="totalDebt" required>
+
+            <button type="button" onclick="calculateAffordability()">Calculate</button>
+          </form>
+        </div>
+      </div>
+      <div id="iaxu29" class="gjs-grid-row">
+        <div id="ihvycs" class="gjs-grid-column">
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculateAffordability() {
+      let income = document.getElementById('income').value;
+      let loanTerm = document.getElementById('loanTerm').value;
+      let totalDebt = document.getElementById('totalDebt').value;
+      let affordability = '';
+      let errorCheck = '';
+
+      if (!income || !loanTerm || !totalDebt || isNaN(income) || isNaN(loanTerm) || isNaN(totalDebt)) {
+        console.log("error here")
+        errorCheck = "Please enter valid numeric values for income, loan term, and total debt.";
+        document.getElementById('result').innerText = errorCheck;
+        return;
+      }
+
+      const calculatedAffordability = (parseFloat(income) - parseFloat(totalDebt)) / parseFloat(loanTerm);
+      affordability = calculatedAffordability.toString();
+      document.getElementById('result').innerText = 'Affordability: ' + affordability;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Affordability Calculator</title>
+  Add your CSS styles here 
 </head>
 <body>
   <h1>House Affordability Calculator</h1>
@@ -16,7 +115,7 @@
     <label for="loanTerm">Loan Term (years):</label>
     <input type="number" id="loanTerm" name="loanTerm" required>
 
-    <!-- New input field for total debt -->
+     New input field for total debt 
     <label for="totalDebt">Total Debt ($):</label>
     <input type="number" id="totalDebt" name="totalDebt" required>
 
@@ -56,3 +155,4 @@
 
 
     </html>
+       -->
